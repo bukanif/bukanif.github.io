@@ -25,17 +25,15 @@ body {font-size:16px;}
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
     <a href="#background" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Background</a> 
     <a href="#datamethods" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Data & Methodology</a> 
-    
-    <form action="/action_page.php">
-    <label for="findings">Key Findings</label>
-    <select name="findings" id="findings">
-      <option value=""></option>
-      <option value="inward">Receiving Countries</option>
-      <option value="outward">Sending Countries</option>
-    </select>
-    
+    <a href="#findings" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Key Findings</a> 
+        <form action="/action_page.php">
+    #   <label for="findings">Key Findings</label>
+        <select name="findings" id="findings">
+          <option value="" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"></option>
+          <option value="inward" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Receiving Countries</option>
+          <option value="outward" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sending Countries</option>
+        </select>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-
   </div>
 </nav>
 
@@ -58,10 +56,27 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
   
+    <p>The purpose of this project was to understand the global remittance landscape in order to determine the feasibility of remittance-based aid in achieving the SDGs.</p>
+    
+    <p>Remittances are cross-border, voluntary monetary and non-monetary (in-kind) transfers made by migrants and diaspora members, individually or collectively, to people or communities in their home countries. 
+    Remittances have become an increasingly important source of development finance for low- and middle-income 
+    countries (LMICs), as remittance flows have surpassed official development assistance (ODA) and are more 
+    consistent than other sources, such as foreign direct investment (FDI) and private debt and investment equity. 
+    As shown in Figure 1, remittances have reached triple the level of official development assistance (ODA), and 
+    have even surpassed foreign direct investment (FDI) in recent years.</p>
+
+# insert image in git
+<img src="odafdi.png" style="width:200%" onclick="onClick(this)" alt="world map">
+<p>Source:  University of California, Davis. <https://migration.ucdavis.edu/rmn/blog/post/?id=2673>
+<p class="w3-center">Source: <a href="https://migration.ucdavis.edu/rmn/blog/post/?id=2673" title="UCD" target="_blank" class="w3-hover-opacity">University of California, Davis</a></p>
+
+
+
   <!-- Photo grid (modal) -->
   <div class="w3-row-padding">
     <div class="w3-half">
-      <img src="back_map.png" style="width:300%" onclick="onClick(this)" alt="world map">
+      <img src="back_map.png" style="width:200%" onclick="onClick(this)" alt="world map">
+#replace with interactive world carto
     </div>
   </div>
 
@@ -78,12 +93,17 @@ body {font-size:16px;}
   <div class="w3-container" id="datamethods" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Data & Methodology.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
+# create horizontal filter
+# insert python dataframes
+# search WB remittance calculation methodology
+    <p>This data exploration relied on data from the World Bank, collected by KNOMAD, a ______.
+    For the purposes of this study, remittances were defined as cross-border monetary transfers made by migrants and diaspora members, individually or collectively, to people or communities in their home countries. 
+    The raw data spans 1980 to 2021 (estimated) and is given in millions, with ___ significant figures. </p>
+    <iframe>"inrem_frame.html"</iframe>
     <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
     dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </p>
-    <iframe>inrem_frame.html</iframe>
   </div>
   
   <!-- Key Findings -->

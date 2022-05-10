@@ -26,9 +26,10 @@ body {font-size:16px;}
     <a href="#background" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Background</a> 
     <a href="#datamethods" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Data & Methodology</a> 
     
-  <form action="/action_page.php">
+    <form action="/action_page.php">
     <label for="findings">Key Findings</label>
     <select name="findings" id="findings">
+      <option value=""></option>
       <option value="inward">Receiving Countries</option>
       <option value="outward">Sending Countries</option>
     </select>
@@ -60,7 +61,7 @@ body {font-size:16px;}
   <!-- Photo grid (modal) -->
   <div class="w3-row-padding">
     <div class="w3-half">
-      <img src="back_map.png" style="width:100%" onclick="onClick(this)" alt="world map">
+      <img src="back_map.png" style="width:300%" onclick="onClick(this)" alt="world map">
     </div>
   </div>
 

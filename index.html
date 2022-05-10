@@ -44,8 +44,8 @@ body {font-size:16px;}
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
 <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-white" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-white w3-xxlarge w3-display-topright">×</span>
+  <div id="modal01" class="w3-modal w3-red" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-red w3-xxlarge w3-display-topright">×</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
       <img id="img01" class="w3-image">
       <p id="caption"></p>
@@ -61,7 +61,7 @@ body {font-size:16px;}
     <!-- Image -->
   <div class="w3-row-padding">
     <div class="w3-half">
-      <img src="back_map.png" style="width:200%" onclick="onClick(this)" alt="world map">
+      <img src="/images/back_map.png" style="width:200%" onclick="onClick(this)" alt="world map">
 #replace with interactive world carto
     </div>
   </div>
@@ -129,12 +129,13 @@ body {font-size:16px;}
     <div class="w3-half">
       <img src="/images/trends_top10.png" style="width:100%" onclick="onClick(this)" alt="Top 10 Receivers, trends">
     </div>
-<div style='clear:both'></div>
+ <div style='clear:both'></div>
   
- 
     <p>These figures certainly do not convey the whole story of the global remittance landscape. Additionally, the top receiving countries are too 
        dispersed to devise a targeted strategy for directing remittances towards sustainable development.
        Thus, aggregating the data to examine remittance inflows at the continental level was the next logical step.</p>
+    
+    <b>Continental Analysis</b>
     <p>The figures below reveal that</p>
     <div class="w3-half">
       <img src="/images/continents.png" style="width:100%" onclick="onClick(this)" alt="Top 10 Remittance Receivers">
@@ -144,7 +145,15 @@ body {font-size:16px;}
     </div>
  <div style='clear:both'></div>
       
- 
+    <b>Regional Analysis</b>
+    <p>The figures below reveal that</p>
+    <div class="w3-half">
+      <img src="/images/regions.png" style="width:100%" onclick="onClick(this)" alt="Top 10 Remittance Receivers">
+    </div>      
+    <div class="w3-half">
+      <img src="/images/regions_trends.png" style="width:100%" onclick="onClick(this)" alt="Top 10 Receivers, trends">
+    </div>
+ <div style='clear:both'></div>
   
   <!-- Contact -->
   <div class="w3-container" id="contact" style="margin-top:75px">

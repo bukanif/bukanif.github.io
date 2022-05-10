@@ -26,13 +26,7 @@ body {font-size:16px;}
     <a href="#background" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Background</a> 
     <a href="#datamethods" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Data & Methodology</a> 
     <a href="#findings" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Key Findings</a> 
-        <form action="/action_page.php">
-        <select name="findings" id="findings">
-          <option value="" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"></option>
-          <option value="inward" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Receiving Countries</option>
-          <option value="outward" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sending Countries</option>
-        </select>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Me</a>
   </div>
 </nav>
 
@@ -48,6 +42,12 @@ body {font-size:16px;}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
+    <!-- Image -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="back_map.png" style="width:200%" onclick="onClick(this)" alt="world map">
+#replace with interactive world carto
+
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="background">
     <h1 class="w3-jumbo"><b>Remittances as a Sustainability Finance Strategy</b></h1>
@@ -56,26 +56,19 @@ body {font-size:16px;}
   </div>
   
     <p>The purpose of this project was to understand the global remittance landscape in order to determine the feasibility of remittance-based aid in achieving the SDGs.</p>
-    
-    <p>Remittances are cross-border, voluntary monetary and non-monetary (in-kind) transfers made by migrants and diaspora members, individually or collectively, to people or communities in their home countries. 
-    Remittances have become an increasingly important source of development finance for low- and middle-income 
-    countries (LMICs), as remittance flows have surpassed official development assistance (ODA) and are more 
-    consistent than other sources, such as foreign direct investment (FDI) and private debt and investment equity. 
-    As shown in Figure 1, remittances have reached triple the level of official development assistance (ODA), and 
-    have even surpassed foreign direct investment (FDI) in recent years.</p>
+    <p>Remittances are cross-border, voluntary monetary and non-monetary (in-kind) transfers made by migrants and diaspora members, individually or collectively, 
+       to people or communities in their home countries. Remittances have become an increasingly important source of development finance for low- and middle-income 
+       countries (LMICs). Data shows remittance flows have surpassed official development assistance (ODA) and are more consistent than other sources of development finance, 
+       such as foreign direct investment (FDI) and private debt and investment equity. </p>
+    <p>As shown in Figure 1, remittances have reached triple the level of ODA, and  have even surpassed foreign direct investment (FDI) in recent years.</p>
 
-# insert image in git
 <img src="odafdi.png" style="width:200%" onclick="onClick(this)" alt="world map">
 <p>Source:  University of California, Davis. <https://migration.ucdavis.edu/rmn/blog/post/?id=2673>
 <p class="w3-center">Source: <a href="https://migration.ucdavis.edu/rmn/blog/post/?id=2673" title="UCD" target="_blank" class="w3-hover-opacity">University of California, Davis</a></p>
 
 
 
-  <!-- Photo grid (modal) -->
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <img src="back_map.png" style="width:200%" onclick="onClick(this)" alt="world map">
-#replace with interactive world carto
+
     </div>
   </div>
 
@@ -88,6 +81,9 @@ body {font-size:16px;}
     </div>
   </div>
 
+  
+  
+  
   <!-- Data & Methodology -->
   <div class="w3-container" id="datamethods" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Data & Methodology.</b></h1>
@@ -115,17 +111,15 @@ body {font-size:16px;}
     </div>
     <div>
     <table>"outrem_frame.html"</table>
-    </div>
-    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-  </div>
+      
+      
+      
   
   <!-- Key Findings -->
   <div class="w3-container" id="findings" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Key Findings.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
+   
     <p>The best team in the world.</p>
     <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
     dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor

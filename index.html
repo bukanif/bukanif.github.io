@@ -33,7 +33,6 @@ body {font-size:16px;}
 </nav>
 
   
-  
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
   <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
@@ -43,7 +42,14 @@ body {font-size:16px;}
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-  
+<!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
   
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
@@ -74,25 +80,12 @@ body {font-size:16px;}
        such as foreign direct investment (FDI) and private debt and investment equity. </p>
     <p>As shown in Figure 1, remittances have reached triple the level of ODA, and  have even surpassed foreign direct investment (FDI) in recent years.</p>
 
-<img src="odafdi.png" style="width:75%" onclick="onClick(this)" alt="world map">
+<img src="odafdi.png" style="width:75%" onclick="onClick(this)" alt="Development finance flows">
 <p class="w3-center">Source: <a href="https://migration.ucdavis.edu/rmn/blog/post/?id=2673" title="UCD" target="_blank" class="w3-hover-opacity">University of California, Davis</a></p>
 
-
-
-
     </div>
   </div>
 
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-
-  
   
   
   <!-- Data & Methodology -->

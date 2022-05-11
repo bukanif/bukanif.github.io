@@ -106,7 +106,118 @@ body {font-size:16px;}
         For the purposes of this study, remittances were defined as cross-border monetary transfers made by migrants and diaspora members, individually or collectively, to people or communities in their home countries.
         To add to the literature on development finance, this study focuses on inward bilateral remittances, intentionally excluding internal remittances (sent within countries rather than across borders).
         </p>
-       
+    
+    
+<!-- Data filter --> 
+
+<script>   
+ FooTable.MyFiltering = FooTable.Filtering.extend({ // inherit the base class
+	construct: function(instance){ // override the default constructor
+		this._super(instance); // call the base constructor
+	}
+});
+  
+ FooTable.MyFiltering = FooTable.Filtering.extend({
+	construct: function(instance){
+		this._super(instance);
+		this.countries = "/datameth/countries.csv"; // the options available in the dropdown
+		this.def = 'All'; // the default/unselected value for the dropdown (this would clear the filter when selected)
+		this.$country = null; // a placeholder for our jQuery wrapper around the dropdown
+	}
+   
+ FooTable.MyFiltering = FooTable.Filtering.extend({
+	construct: function(instance){
+		this._super(instance);
+		this.years = "/datameth/years.csv"; // the options available in the dropdown
+		this.def = 'All'; // the default/unselected value for the dropdown (this would clear the filter when selected)
+		this.$year = null; // a placeholder for our jQuery wrapper around the dropdown
+	}  
+}); 
+ 
+ $create: function(){
+	this._super(); // call the base $create method, this populates the $form property
+	var self = this, // hold a reference to the self for use later
+		// create the bootstrap form group and append it to the form
+		$form_grp = $('<div/>', {'class': 'form-group'})
+			.append($('<label/>', {'class': 'sr-only', text: 'Country'}))
+			.prependTo(self.$form);
+
+// create select element 1 (Country) with the default value and append it to the form group
+	self.$country = $('<select/>', { 'class': 'form-control' })
+		.on('change', {self: self}, self._onCountryDropdownChanged)
+		.append($('<option/>', {text: self.def}))
+		.appendTo($form_grp);
+
+// add each of the statuses to the dropdown element
+	$.each(self.countries, function(i, country){
+		self.$country.append($('<option/>').text(Country));
+	});
+} 
+  
+// create select element 2 (Year) with the default value and append it to the form group
+	self.$year = $('<select/>', { 'class': 'form-control' })
+		.on('change', {self: self}, self._onYearDropdownChanged)
+		.append($('<option/>', {text: self.def}))
+		.appendTo($form_grp);
+
+// add each of the statuses to the dropdown element
+	$.each(self.years, function(i, year){
+		self.$year.append($('<option/>').text(Year));
+	});
+}
+
+// to handle Country change event we bound to above and apply the filter.
+ _onCountryDropdownChanged: function(e){
+	var self = e.data.self, // get the MyFiltering object
+		selected = $(this).val(); // get the current dropdown value
+	if (selected !== self.def){ // if it's not the default value add a new filter
+		self.addFilter('status', selected, ['status']);
+	} else { // otherwise remove the filter
+		self.removeFilter('status');
+	}
+	// initiate the actual filter operation
+	self.filter();
+}
+// to handle Year change event we bound to above and apply the filter.
+ _onYearDropdownChanged: function(e){
+	var self = e.data.self, // get the MyFiltering object
+		selected = $(this).val(); // get the current dropdown value
+	if (selected !== self.def){ // if it's not the default value add a new filter
+		self.addFilter('status', selected, ['status']);
+	} else { // otherwise remove the filter
+		self.removeFilter('status');
+	}
+	// initiate the actual filter operation
+	self.filter();
+}
+  
+draw: function(){
+	this._super(); // call the base draw method, this will handle the default search input
+	var country = this.find('country'); // find the status filter
+	if (country instanceof FooTable.Filter){ // if it exists update the dropdown to reflect the value
+		this.$country.val(country.query.val());
+	} else { // otherwise update the dropdown to the default value
+		this.$country.val(this.def);
+	}
+}
+
+draw: function(){
+	this._super(); // call the base draw method, this will handle the default search input
+	var country = this.find('year'); // find the status filter
+	if (year instanceof FooTable.Filter){ // if it exists update the dropdown to reflect the value
+		this.$year.val(year.query.val());
+	} else { // otherwise update the dropdown to the default value
+		this.$year.val(this.def);
+	}
+}
+  
+FooTable.components.register('filtering', FooTable.MyFiltering);
+
+  
+ </script>   
+    
+    
+    
  <!-- Dataframes --> 
 <body>
   <div id="table-wrapper">

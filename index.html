@@ -30,10 +30,7 @@ table {
     overflow-x: auto;
     white-space: nowrap;
 }
-th {
-  height: 30px;
-  width: auto;
-}
+
 </style>
 </head>
 <body>
@@ -82,7 +79,7 @@ th {
   </div>
 
   
-    <!-- Image -->
+    <!-- World Map -->
   <div class="w3-row-padding">
     <div class="w3-half">
       <img src="/images/back_map.png" style="width:200%" onclick="onClick(this)" class="center" alt="world map">
@@ -124,6 +121,7 @@ th {
     <p> This data exploration relied on data from the World Bank, reported by the Global Knowledge Partnership on Migration and Development (KNOMAD). The raw data spans 1980 to 2021 (estimated) and is given in millions, with up to six significant figures.
         For the purposes of this study, remittances were defined as cross-border monetary transfers made by migrants and diaspora members, individually or collectively, to people or communities in their home countries.
         To add to the literature on development finance, this study focuses on inward bilateral remittances, intentionally excluding internal remittances (sent within countries rather than across borders).
+	Regional classifications were defined according to the United Nations standard.    
         </p>
 <br>
 <br>
@@ -355,14 +353,38 @@ FooTable.components.register('filtering', FooTable.MyFiltering);
     <h1 class="w3-xxxlarge w3-text-red"><b>Geo Data.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">    
   </div> 
-    
-    
-    
+<p> Below are static maps to depict the intensity of financial flows to countries in the same region relative to each other. The regional visualizations 
+     are in order from the greatest to least remittance receivers.Each map is paired with its respective bar graphs to reflect the quanitative metric for 
+     each country (or just the topmost), as well as supplement the static nature of the maps. Assessing "regional intensity" of financial flows can aid in
+     developing a precise yet broad strategy, aimed at targeting countries/geographies that are key players in the global remittance landscape.</p>
+	 
+	  <h3> Western Europe </h3>	
+<img src="/images/WEU.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
+	  <h3> East Asia & the Pacific </h3>	
+<img src="/images/EAP.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
+	  <h3> South Asia </h3>	
+<img src="/images/SAS.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
+	  <h3> Latin America & the Caribbean </h3>	
+<img src="/images/LAC.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
+	  <h3> Middle East & North Africa </h3>		  
+<img src="/images/MENA.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
+	  <h3> Eastern Europe & Central Asia </h3>	
+<img src="/images/EUCA.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
+	  <h3> West & Central Africa  </h3>	
+<img src="/images/WCAF.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
+	  <h3> East & Southern Africa </h3>	
+<img src="/images/WCAF.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
+	  <h3> North America </h3>	
+<img src="/images/NA.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
+
+     
+  
   <!-- Contact -->
   <div class="w3-container" id="contact" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Contact Me.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Would you like to find out more about this project? Kindly input your information and I will follow up!</p>
+    <p>Would you like to find out more about this project? Kindly input your information and I will follow up!<br> If you're too excited, feel free to 
+       reach me at bukola.anifowoshe@berkeley.edu</p>
     <form action="/action_page.php" target="_blank">
       <div class="w3-section">
         <label>Name</label>

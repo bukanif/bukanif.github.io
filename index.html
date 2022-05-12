@@ -16,7 +16,14 @@ body {font-size:16px;}
   margin-left: auto;
   margin-right: auto;
 }
-
+table {
+    display: block;
+    text-align: left;
+    height: 400px;
+    overflow-y: auto;  
+    overflow-x: auto;
+    white-space: nowrap;
+}
 table, th, td {
   border: 1px solid;
   height: auto;
@@ -383,6 +390,7 @@ FooTable.components.register('filtering', FooTable.MyFiltering);
 <img src="/images/WCAF.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
 	  <h2> North America </h2>	
 <img src="/images/NA.png" style="width:100%" onclick="onClick(this)" alt="Remittances received by region, trends"><br>
+<br><br>
 
      
   
@@ -413,7 +421,7 @@ FooTable.components.register('filtering', FooTable.MyFiltering);
 </div>
 
 <!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+<div class="w3-light-grey w3-container w3-padding-16" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
 
 <script>
 // Script to open and close sidebar

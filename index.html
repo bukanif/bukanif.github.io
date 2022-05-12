@@ -30,7 +30,11 @@ table, th, td {
 }
 tr:nth-child(even) {
   background-color: #f6685e;
-}	
+}
+td.first {
+    width: auto;
+    white-space: nowrap;
+}
 </style>
 </head>
 <body>
@@ -164,11 +168,12 @@ function includeHTML() {
 <div w3-include-html="inrem_frame.html"></div> 	    
 	<br>	    
 <h4>Remittance Outflows</h4>
-<div w3-include-html="outrem0.html"></div> 
+<div w3-include-html="outrem_frame.html"></div> 
 
 <script>
 includeHTML();
 </script>
+	    
 <!-- Data filter --> 
 <script>   
  FooTable.MyFiltering = FooTable.Filtering.extend({ // inherit the base class
